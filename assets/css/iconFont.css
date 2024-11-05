@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "iconFont";
+    src: url("./iconFont.ttf?b08da7ec54d83c19a04d4f50bb955ef3") format("truetype"),
+        url("./iconFont.woff?b08da7ec54d83c19a04d4f50bb955ef3") format("woff"),
+        url("./iconFont.woff2?b08da7ec54d83c19a04d4f50bb955ef3") format("woff2");
+}
+
+i[class^="iconFont-"]:before,
+i[class*=" iconFont-"]:before {
+    font-family: iconFont !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.iconFont-angle-left:before {
+    content: "\f101";
+}
+
+.iconFont-animation:before {
+    content: "\f102";
+}
+
+.iconFont-archive:before {
+    content: "\f103";
+}
+
+.iconFont-back:before {
+    content: "\f104";
+}
+
+.iconFont-check-thin:before {
+    content: "\f105";
+}
+
+.iconFont-check:before {
+    content: "\f106";
+}
+
+.iconFont-chevron-left:before {
+    content: "\f107";
+}
+
+.iconFont-chevron-right:before {
+    content: "\f108";
+}
+
+.iconFont-close-line:before {
+    content: "\f109";
+}
+
+.iconFont-close:before {
+    content: "\f10a";
+}
+
+.iconFont-copy:before {
+    content: "\f10b";
+}
+
+.iconFont-currency-mobile:before {
+    content: "\f10c";
+}
+
+.iconFont-dollar-new:before {
+    content: "\f10d";
+}
+
+.iconFont-dollar:before {
+    content: "\f10e";
+}
+
+.iconFont-edit:before {
+    content: "\f10f";
+}
+
+.iconFont-fs-off:before {
+    content: "\f110";
+}
+
+.iconFont-fs-on:before {
+    content: "\f111";
+}
+
+.iconFont-guide:before {
+    content: "\f112";
+}
+
+.iconFont-icon-user:before {
+    content: "\f113";
+}
+
+.iconFont-menu-new:before {
+    content: "\f114";
+}
+
+.iconFont-music:before {
+    content: "\f115";
+}
+
+.iconFont-mybets-new:before {
+    content: "\f116";
+}
+
+.iconFont-mybets:before {
+    content: "\f117";
+}
+
+.iconFont-rules:before {
+    content: "\f118";
+}
+
+.iconFont-save:before {
+    content: "\f119";
+}
+
+.iconFont-settings:before {
+    content: "\f11a";
+}
+
+.iconFont-sound:before {
+    content: "\f11b";
+}
+
+.iconFont-tournament-new:before {
+    content: "\f11c";
+}
+
+.iconFont-tournaments:before {
+    content: "\f11d";
+}

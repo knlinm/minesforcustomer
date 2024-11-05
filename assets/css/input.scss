@@ -1,0 +1,213 @@
+@import 'src/common/assets/scss/common/mixins.scss';
+
+.games-input {
+    position: relative;
+    &__number {
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        padding: 10px 16px;
+        border-radius: 10px;
+        box-shadow: inset -2px -2px 10px 0 rgba(255, 255, 255, 0.05),
+            inset 2px 3px 10px 0 #070709;
+        background-image: linear-gradient(
+            135deg,
+            #222326 0%,
+            #222326 25%,
+            #283034 100%
+        );
+        background-color: transparent;
+        outline: none;
+        border: 1px solid rgb(32, 35, 40);
+
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.14;
+        color: #d6e1ef;
+        &:focus {
+            outline: none !important;
+        }
+        &[type='number'] {
+            -webkit-appearance: none;
+            margin: 0;
+            -moz-appearance: textfield; /* Firefox */
+            &::-webkit-inner-spin-button,
+            &::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+    }
+    &__wrapper {
+        position: relative;
+        height: 52px;
+        margin-bottom: 20px;
+        border-radius: 11px;
+        box-shadow: inset 2px 2px 2px 0 rgba(26, 32, 38, 0.4);
+        background: linear-gradient(
+            98deg,
+            rgba(200, 213, 225, 0.25) 0%,
+            rgba(0, 0, 0, 0) 100%
+        );
+        label {
+            position: absolute;
+            left: 18px;
+            top: 12px;
+            z-index: 1;
+            font-size: 11px;
+            line-height: 0.91;
+            color: rgba(255, 255, 255, 0.5);
+            & + .games-input__number {
+                padding-top: 30px;
+            }
+            .tooltip-box {
+                position: absolute;
+                top: 0;
+                right: -11px;
+            }
+        }
+    }
+    &__sign {
+        position: absolute;
+        left: 18px;
+        top: 29px;
+        z-index: 1;
+
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.14;
+        color: #d6e1ef;
+    }
+}
+
+.settings-input__wrapper {
+    position: relative;
+    display: flex;
+    margin-bottom: 20px;
+    &:first-child {
+        margin-bottom: 12px;
+    }
+    &:nth-child(2) {
+        margin-bottom: 11px;
+    }
+    &:nth-child(3) {
+        margin-bottom: 15px;
+    }
+    &._has_btn {
+        position: relative;
+        label {
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .games-input__wrapper {
+            label {
+                left: 95px;
+            }
+        }
+        .input-button {
+            position: absolute;
+            top: 4px;
+            z-index: 1;
+        }
+    }
+    label {
+        display: flex;
+        align-items: center;
+        min-width: 87px;
+
+        &[for='on_loss'] {
+            max-width: 87px;
+        }
+        & + .switcher {
+            margin-left: auto;
+        }
+        & + .input-button {
+            left: 91px;
+            & + .games-input__wrapper {
+                .games-input__number {
+                    padding-left: 95px;
+                }
+            }
+            & + .input-button {
+                left: 172px;
+                & + .games-input__wrapper {
+                    .games-input__number {
+                        padding-left: 171px;
+                    }
+                }
+            }
+        }
+    }
+    .games-input__wrapper {
+        width: 100%;
+        margin: 0 !important;
+        &.input--warning {
+            margin-bottom: 20px !important;
+        }
+    }
+    .indicator {
+        position: absolute;
+        right: 11px;
+        top: 18px;
+        color: rgba(255, 255, 255, 0.5);
+        z-index: 3;
+        font-size: 21px;
+        &._infinity {
+        }
+    }
+}
+
+.input {
+    &--warning {
+        margin-bottom: 40px;
+        background-image: linear-gradient(
+            98deg,
+            #e17671 -81%,
+            rgba(49, 20, 20, 0.07) 182%
+        );
+        .input--error {
+            display: block;
+        }
+    }
+    &--error {
+        display: none;
+        position: absolute;
+        bottom: -19px;
+        left: 0;
+        width: 100%;
+        padding: 0 17px;
+
+        font-size: 11px;
+        line-height: 0.91;
+        color: rgba(227, 113, 113, 0.64);
+        text-align: left;
+    }
+    &--disabled {
+        opacity: 0.4;
+    }
+}
+
+@include desktop() {
+    .input-text__wrapper {
+        .games-input__wrapper {
+            &.input--signed {
+                .games-input__number {
+                    padding-left: 24px;
+                }
+            }
+        }
+    }
+}
+
+@include mobile() {
+    .games-input {
+        &__sign {
+            position: absolute;
+            left: 50%;
+            top: 29px;
+        }
+    }
+}
